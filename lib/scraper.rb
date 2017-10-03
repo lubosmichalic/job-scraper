@@ -11,7 +11,7 @@ class Scraper
     @data
   end
 
-  def retrieve_page
-    @data = HTTParty.get(JOBONLINE_URL)
+  def retrieve_page(search_term = '')
+    @data = HTTParty.get(JOBONLINE_URL + search_term)
   end
 end
